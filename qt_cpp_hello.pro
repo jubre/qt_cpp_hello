@@ -26,3 +26,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 HEADERS += \
     test.h \
     cat.h
+
+# The following lines tells Qmake to use pkg-config for opencv
+QT_CONFIG -= no-pkg-config
+CONFIG  += link_pkgconfig
+PKGCONFIG += opencv
+
+DISTFILES += \
+    ../../opencv/build/lib/libopencv_core.2.4.13.dylib
